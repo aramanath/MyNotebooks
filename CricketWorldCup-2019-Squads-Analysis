@@ -1,0 +1,464 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md\n\n# Find the Better Team!",
+      "user": "ajithr@qubole.com",
+      "dateUpdated": "Jun 8, 2019 7:08:29 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "title": false,
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "version": "v1",
+      "jobName": "paragraph_1560014167957_-1801044866",
+      "id": "20190608-171607_1940270625_q_R5TXF98GU11559852555",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eFind the Better Team!\u003c/h1\u003e\n\u003c/div\u003e"
+      },
+      "dateCreated": "Jun 8, 2019 5:16:07 PM",
+      "dateSubmitted": "Jun 8, 2019 7:08:26 PM",
+      "dateStarted": "Jun 8, 2019 7:08:26 PM",
+      "dateFinished": "Jun 8, 2019 7:08:26 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "text": "%pyspark\nteam_list \u003d []\nteams \u003d spark.sql(\"select TeamName,TeamName from cricketworldcup.squads\")\nfor row in teams.rdd.collect():\n    team_list.append(row)",
+      "user": "ajithr@qubole.com",
+      "dateUpdated": "Jun 8, 2019 7:08:34 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "tableHide": true,
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "JOB UI",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "https://us.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.0.0.27%3A8088%2Fproxy%2Fapplication_1559999607540_0003/jobs/job?spark\u003dtrue\u0026id\u003d215"
+          ],
+          "interpreterSettingId": "2EE8NCBPX221951558353806566"
+        }
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 215,
+            "jobUrl": "https://us.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.0.0.27%3A8088%2Fproxy%2Fapplication_1559999607540_0003/jobs/job?spark\u003dtrue\u0026id\u003d215",
+            "numTasks": 4,
+            "numCompletedTasks": 4,
+            "stages": [
+              {
+                "id": 215,
+                "completed": true,
+                "status": "Completed",
+                "stageUrl": "https://us.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.0.0.27%3A8088%2Fproxy%2Fapplication_1559999607540_0003/stages/stage/?id\u003d215\u0026attempt\u003d0",
+                "numCompleteTasks": 4,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 4
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 4,
+        "numTasks": 4,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1560020749142_1172117248",
+      "id": "20190608-190549_918954838_q_R5TXF98GU11559852555",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": ""
+      },
+      "dateCreated": "Jun 8, 2019 7:05:49 PM",
+      "dateSubmitted": "Jun 8, 2019 7:08:34 PM",
+      "dateStarted": "Jun 8, 2019 7:08:34 PM",
+      "dateFinished": "Jun 8, 2019 7:08:35 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Select the First Team to compare",
+      "text": "%pyspark\n\nselected_team_1 \u003d z.select(\"Team 1\", team_list)",
+      "user": "ajithr@qubole.com",
+      "dateUpdated": "Jun 8, 2019 7:41:04 PM",
+      "config": {
+        "colWidth": 6.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "title": true,
+        "editorHide": true
+      },
+      "settings": {
+        "params": {
+          "day": "",
+          "Team 1": "Pakistan"
+        },
+        "forms": {
+          "Team 1": {
+            "name": "Team 1",
+            "displayName": "Team 1",
+            "type": "select",
+            "defaultValue": "",
+            "options": [
+              {
+                "value": "Pakistan",
+                "displayName": "Pakistan"
+              },
+              {
+                "value": "SouthAfrica",
+                "displayName": "SouthAfrica"
+              },
+              {
+                "value": "SriLanka",
+                "displayName": "SriLanka"
+              },
+              {
+                "value": "WestIndies",
+                "displayName": "WestIndies"
+              },
+              {
+                "value": "Afghanistan",
+                "displayName": "Afghanistan"
+              },
+              {
+                "value": "Australia",
+                "displayName": "Australia"
+              },
+              {
+                "value": "Bangladesh",
+                "displayName": "Bangladesh"
+              },
+              {
+                "value": "England",
+                "displayName": "England"
+              },
+              {
+                "value": "India",
+                "displayName": "India"
+              },
+              {
+                "value": "NewZealand",
+                "displayName": "NewZealand"
+              }
+            ],
+            "hidden": false
+          }
+        }
+      },
+      "version": "v1",
+      "jobName": "paragraph_1560014174789_-442481176",
+      "id": "20190608-171614_1249007308_q_R5TXF98GU11559852555",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": ""
+      },
+      "dateCreated": "Jun 8, 2019 5:16:14 PM",
+      "dateSubmitted": "Jun 8, 2019 7:08:56 PM",
+      "dateStarted": "Jun 8, 2019 7:08:56 PM",
+      "dateFinished": "Jun 8, 2019 7:08:56 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Select the Second Team to compare",
+      "text": "%pyspark\n\nselected_team_2 \u003d z.select(\"Team 2\", team_list)",
+      "user": "ajithr@qubole.com",
+      "dateUpdated": "Jun 8, 2019 7:08:49 PM",
+      "config": {
+        "colWidth": 6.0,
+        "graph": {
+          "mode": "multiBarChart",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "StartDate",
+              "index": 11.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "SR",
+              "index": 5.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "Runs",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "Mins",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          }
+        },
+        "enabled": true,
+        "editorHide": true,
+        "title": true
+      },
+      "settings": {
+        "params": {
+          "Team 2": "India"
+        },
+        "forms": {
+          "Team 2": {
+            "name": "Team 2",
+            "displayName": "Team 2",
+            "type": "select",
+            "defaultValue": "",
+            "options": [
+              {
+                "value": "Pakistan",
+                "displayName": "Pakistan"
+              },
+              {
+                "value": "SouthAfrica",
+                "displayName": "SouthAfrica"
+              },
+              {
+                "value": "SriLanka",
+                "displayName": "SriLanka"
+              },
+              {
+                "value": "WestIndies",
+                "displayName": "WestIndies"
+              },
+              {
+                "value": "Afghanistan",
+                "displayName": "Afghanistan"
+              },
+              {
+                "value": "Australia",
+                "displayName": "Australia"
+              },
+              {
+                "value": "Bangladesh",
+                "displayName": "Bangladesh"
+              },
+              {
+                "value": "England",
+                "displayName": "England"
+              },
+              {
+                "value": "India",
+                "displayName": "India"
+              },
+              {
+                "value": "NewZealand",
+                "displayName": "NewZealand"
+              }
+            ],
+            "hidden": false
+          }
+        }
+      },
+      "version": "v1",
+      "jobName": "paragraph_1559852560808_-1238406921",
+      "id": "20190606-202240_1342882005_q_R5TXF98GU11559852555",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": ""
+      },
+      "dateCreated": "Jun 6, 2019 8:22:35 PM",
+      "dateSubmitted": "Jun 8, 2019 7:08:49 PM",
+      "dateStarted": "Jun 8, 2019 7:08:49 PM",
+      "dateFinished": "Jun 8, 2019 7:08:49 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Top Batsmen considering ODI Averages",
+      "text": "%pyspark\n\ndf_selected_team_1 \u003d \n",
+      "user": "ajithr@qubole.com",
+      "dateUpdated": "Jun 8, 2019 7:41:35 PM",
+      "config": {
+        "colWidth": 6.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "version": "v0",
+      "jobName": "paragraph_1559852607925_544596103",
+      "id": "20190606-202327_448337792_q_R5TXF98GU11559852555",
+      "dateCreated": "Jun 6, 2019 8:23:27 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Top Batsmen considering ODI Averages",
+      "text": "",
+      "user": "ajithr@qubole.com",
+      "dateUpdated": "Jun 8, 2019 7:12:31 PM",
+      "config": {
+        "colWidth": 6.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "version": "v0",
+      "jobName": "paragraph_1560020983710_72041877",
+      "id": "20190608-190943_1252148005_q_R5TXF98GU11559852555",
+      "dateCreated": "Jun 8, 2019 7:09:43 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Top Bowlers considering ODI Averages",
+      "text": "",
+      "user": "ajithr@qubole.com",
+      "dateUpdated": "Jun 8, 2019 7:12:46 PM",
+      "config": {
+        "colWidth": 6.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "version": "v0",
+      "jobName": "paragraph_1560021016589_-435380625",
+      "id": "20190608-191016_433197730_q_R5TXF98GU11559852555",
+      "dateCreated": "Jun 8, 2019 7:10:16 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Top Bowlers considering ODI Averages",
+      "text": "",
+      "user": "ajithr@qubole.com",
+      "dateUpdated": "Jun 8, 2019 7:13:06 PM",
+      "config": {
+        "colWidth": 6.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "version": "v0",
+      "jobName": "paragraph_1560021033016_1846595750",
+      "id": "20190608-191033_436594219_q_R5TXF98GU11559852555",
+      "dateCreated": "Jun 8, 2019 7:10:33 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 1000
+    }
+  ],
+  "name": "SquadsAnalysis",
+  "id": "R5TXF98GU11559852555",
+  "angularObjects": {
+    "2ECBBMC26221951558353187562:shared_process": [],
+    "2EAKQUMSW221951558353187562:shared_process": [],
+    "2EE8NCBPX221951558353806566:shared_process": [],
+    "2ED1HD45Z221951558353187563:shared_process": []
+  },
+  "config": {
+    "isDashboard": false,
+    "defaultLang": "pyspark"
+  },
+  "info": {},
+  "source": "FCN"
+}
