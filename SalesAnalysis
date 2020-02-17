@@ -1,0 +1,925 @@
+{
+  "paragraphs": [
+    {
+      "text": "println(\"%html \u003ch4\u003e Steps to consume this Example Dashboard \u003c/h4\u003e\")\nprintln(\"\u003col\u003e\")\nprintln(\"  \u003cli\u003eClone this example as a Notebook\u003c/li\u003e\")\nprintln(\"  \u003cli\u003eDelete this paragraph\u003c/li\u003e\")\nprintln(\"  \u003cli\u003eCreate a Dashboard from the Notebook\u003c/li\u003e\")\nprintln(\"\u003c/ol\u003e\")",
+      "user": "ajithr@qubole.com",
+      "dateUpdated": "Feb 17, 2020 10:30:29 AM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "editorHide": true,
+        "results": [
+          {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "keys": [],
+              "values": [],
+              "groups": [],
+              "scatter": {}
+            }
+          }
+        ],
+        "fontSize": 9.0,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003ch4\u003e Steps to consume this Example Dashboard \u003c/h4\u003e\n\u003col\u003e\n  \u003cli\u003eClone this example as a Notebook\u003c/li\u003e\n  \u003cli\u003eDelete this paragraph\u003c/li\u003e\n  \u003cli\u003eCreate a Dashboard from the Notebook\u003c/li\u003e\n\u003c/ol\u003e\n"
+          }
+        ]
+      },
+      "paragraphProgress": {
+        "jobs": [],
+        "numCompletedTasks": 0,
+        "numTasks": 0,
+        "truncated": false
+      },
+      "apps": [],
+      "version": "v0",
+      "jobName": "paragraph_1515100579390_540116404",
+      "id": "20180104-211619_124756926_q_CSYGBXVCDJ1581935390",
+      "dateCreated": "Jan 4, 2018 9:16:19 PM",
+      "dateStarted": "Jan 23, 2018 7:58:38 PM",
+      "dateFinished": "Jan 23, 2018 7:59:13 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Booking - % of Goal",
+      "text": "%spark\n\nvar actualRevenue \u003d spark.sql(\"select sum(revenue_actual) from sales_table\").collect\nvar expectedRevenue \u003d spark.sql(\"select sum(revenue_expected) from sales_table\").collect\n\nvar bookingPercentage \u003d (actualRevenue(0)(0) + \"\").toFloat/(expectedRevenue(0)(0) + \"\").toFloat * 100\n\nprintln(\"%html \u003ch1\u003e \" + bookingPercentage.toInt + \"%\u003c/h1\u003e\")",
+      "user": "ajithr@qubole.com",
+      "dateUpdated": "Feb 17, 2020 10:30:29 AM",
+      "config": {
+        "colWidth": 3.0,
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "title": true,
+        "editorHide": true,
+        "tableHide": false,
+        "results": [
+          {
+            "graph": {
+              "mode": "table",
+              "height": 58.0,
+              "optionOpen": false,
+              "keys": [],
+              "values": [],
+              "groups": [],
+              "scatter": {}
+            }
+          }
+        ],
+        "fontSize": 9.0,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003ch1\u003e 117%\u003c/h1\u003e\n"
+          }
+        ]
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 0,
+            "jobUrl": "https://qa.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.109.218.180%3A8088%2Fproxy%2Fapplication_1516733470665_0002/jobs/job?spark\u003dtrue\u0026id\u003d0",
+            "numTasks": 3,
+            "numCompletedTasks": 3,
+            "stages": [
+              {
+                "id": 0,
+                "completed": true,
+                "stageUrl": "https://qa.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.109.218.180%3A8088%2Fproxy%2Fapplication_1516733470665_0002/stages/stage/?id\u003d0\u0026attempt\u003d0",
+                "numCompleteTasks": 2,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 2
+              },
+              {
+                "id": 1,
+                "completed": true,
+                "stageUrl": "https://qa.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.109.218.180%3A8088%2Fproxy%2Fapplication_1516733470665_0002/stages/stage/?id\u003d1\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          },
+          {
+            "id": 1,
+            "jobUrl": "https://qa.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.109.218.180%3A8088%2Fproxy%2Fapplication_1516733470665_0002/jobs/job?spark\u003dtrue\u0026id\u003d1",
+            "numTasks": 3,
+            "numCompletedTasks": 3,
+            "stages": [
+              {
+                "id": 2,
+                "completed": true,
+                "stageUrl": "https://qa.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.109.218.180%3A8088%2Fproxy%2Fapplication_1516733470665_0002/stages/stage/?id\u003d2\u0026attempt\u003d0",
+                "numCompleteTasks": 2,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 2
+              },
+              {
+                "id": 3,
+                "completed": true,
+                "stageUrl": "https://qa.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.109.218.180%3A8088%2Fproxy%2Fapplication_1516733470665_0002/stages/stage/?id\u003d3\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 6,
+        "numTasks": 6,
+        "truncated": false
+      },
+      "apps": [],
+      "version": "v0",
+      "jobName": "paragraph_1515071514678_637182859",
+      "id": "20180104-131154_478300463_q_CSYGBXVCDJ1581935390",
+      "dateCreated": "Jan 4, 2018 1:11:54 PM",
+      "dateStarted": "Jan 23, 2018 7:59:13 PM",
+      "dateFinished": "Jan 23, 2018 7:59:31 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Forecast",
+      "text": "%spark\n\nvar result \u003d spark.sql(\"select sum(revenue_expected) from sales_table\").collect\nprintln(\"%html \u003ch1\u003e $\" + result(0)(0) + \"\u003c/h1\u003e\")",
+      "user": "ajithr@qubole.com",
+      "dateUpdated": "Feb 17, 2020 10:30:29 AM",
+      "config": {
+        "colWidth": 3.0,
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "title": true,
+        "editorHide": true,
+        "tableHide": false,
+        "results": [
+          {
+            "graph": {
+              "mode": "table",
+              "height": 58.0,
+              "optionOpen": false,
+              "keys": [
+                {
+                  "name": "month",
+                  "index": 0.0,
+                  "aggr": "sum"
+                }
+              ],
+              "values": [
+                {
+                  "name": "quarter",
+                  "index": 1.0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "scatter": {
+                "xAxis": {
+                  "name": "month",
+                  "index": 0.0,
+                  "aggr": "sum"
+                },
+                "yAxis": {
+                  "name": "quarter",
+                  "index": 1.0,
+                  "aggr": "sum"
+                }
+              }
+            }
+          }
+        ],
+        "fontSize": 9.0,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003ch1\u003e $570000\u003c/h1\u003e\n"
+          }
+        ]
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 2,
+            "jobUrl": "https://qa.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.109.218.180%3A8088%2Fproxy%2Fapplication_1516733470665_0002/jobs/job?spark\u003dtrue\u0026id\u003d2",
+            "numTasks": 3,
+            "numCompletedTasks": 3,
+            "stages": [
+              {
+                "id": 5,
+                "completed": true,
+                "stageUrl": "https://qa.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.109.218.180%3A8088%2Fproxy%2Fapplication_1516733470665_0002/stages/stage/?id\u003d5\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              },
+              {
+                "id": 4,
+                "completed": true,
+                "stageUrl": "https://qa.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.109.218.180%3A8088%2Fproxy%2Fapplication_1516733470665_0002/stages/stage/?id\u003d4\u0026attempt\u003d0",
+                "numCompleteTasks": 2,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 2
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 3,
+        "numTasks": 3,
+        "truncated": false
+      },
+      "apps": [],
+      "version": "v0",
+      "jobName": "paragraph_1515067947243_-744138427",
+      "id": "20180104-121227_967228759_q_CSYGBXVCDJ1581935390",
+      "dateCreated": "Jan 4, 2018 12:12:27 PM",
+      "dateStarted": "Jan 23, 2018 7:59:22 PM",
+      "dateFinished": "Jan 23, 2018 7:59:31 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Bookings",
+      "text": "%spark\n\nvar result \u003d spark.sql(\"select sum(revenue_actual) from sales_table\").collect\nprintln(\"%html \u003ch1\u003e $\" + result(0)(0) + \"\u003c/h1\u003e\")",
+      "user": "ajithr@qubole.com",
+      "dateUpdated": "Feb 17, 2020 10:30:29 AM",
+      "config": {
+        "colWidth": 3.0,
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "title": true,
+        "editorHide": true,
+        "tableHide": false,
+        "results": [
+          {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "keys": [],
+              "values": [],
+              "groups": [],
+              "scatter": {}
+            }
+          }
+        ],
+        "fontSize": 9.0,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003ch1\u003e $671500\u003c/h1\u003e\n"
+          }
+        ]
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 3,
+            "jobUrl": "https://qa.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.109.218.180%3A8088%2Fproxy%2Fapplication_1516733470665_0002/jobs/job?spark\u003dtrue\u0026id\u003d3",
+            "numTasks": 3,
+            "numCompletedTasks": 3,
+            "stages": [
+              {
+                "id": 6,
+                "completed": true,
+                "stageUrl": "https://qa.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.109.218.180%3A8088%2Fproxy%2Fapplication_1516733470665_0002/stages/stage/?id\u003d6\u0026attempt\u003d0",
+                "numCompleteTasks": 2,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 2
+              },
+              {
+                "id": 7,
+                "completed": true,
+                "stageUrl": "https://qa.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.109.218.180%3A8088%2Fproxy%2Fapplication_1516733470665_0002/stages/stage/?id\u003d7\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 3,
+        "numTasks": 3,
+        "truncated": false
+      },
+      "apps": [],
+      "version": "v0",
+      "jobName": "paragraph_1515071499626_-1976831817",
+      "id": "20180104-131139_607948379_q_CSYGBXVCDJ1581935390",
+      "dateCreated": "Jan 4, 2018 1:11:39 PM",
+      "dateStarted": "Jan 23, 2018 7:59:31 PM",
+      "dateFinished": "Jan 23, 2018 7:59:32 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Average Deal Value",
+      "text": "%spark\n\nvar totalRevenue \u003d spark.sql(\"select sum(revenue_actual) from sales_table\").collect\nvar totalCustomers \u003d spark.sql(\"select sum(customers_closed) from sales_table\").collect\n\nvar averageDealValue \u003d Integer.parseInt(totalRevenue(0)(0) + \"\")/Integer.parseInt(totalCustomers(0)(0) + \"\")\n\nprintln(\"%html \u003ch1\u003e $\" + averageDealValue + \"\u003c/h1\u003e\")",
+      "user": "ajithr@qubole.com",
+      "dateUpdated": "Feb 17, 2020 10:30:29 AM",
+      "config": {
+        "colWidth": 3.0,
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "title": true,
+        "editorHide": true,
+        "tableHide": false,
+        "results": [
+          {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "keys": [],
+              "values": [],
+              "groups": [],
+              "scatter": {}
+            }
+          }
+        ],
+        "fontSize": 9.0,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003ch1\u003e $20984\u003c/h1\u003e\n"
+          }
+        ]
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 4,
+            "jobUrl": "https://qa.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.109.218.180%3A8088%2Fproxy%2Fapplication_1516733470665_0002/jobs/job?spark\u003dtrue\u0026id\u003d4",
+            "numTasks": 3,
+            "numCompletedTasks": 3,
+            "stages": [
+              {
+                "id": 9,
+                "completed": true,
+                "stageUrl": "https://qa.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.109.218.180%3A8088%2Fproxy%2Fapplication_1516733470665_0002/stages/stage/?id\u003d9\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              },
+              {
+                "id": 8,
+                "completed": true,
+                "stageUrl": "https://qa.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.109.218.180%3A8088%2Fproxy%2Fapplication_1516733470665_0002/stages/stage/?id\u003d8\u0026attempt\u003d0",
+                "numCompleteTasks": 2,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 2
+              }
+            ],
+            "status": "Success"
+          },
+          {
+            "id": 5,
+            "jobUrl": "https://qa.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.109.218.180%3A8088%2Fproxy%2Fapplication_1516733470665_0002/jobs/job?spark\u003dtrue\u0026id\u003d5",
+            "numTasks": 3,
+            "numCompletedTasks": 3,
+            "stages": [
+              {
+                "id": 10,
+                "completed": true,
+                "stageUrl": "https://qa.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.109.218.180%3A8088%2Fproxy%2Fapplication_1516733470665_0002/stages/stage/?id\u003d10\u0026attempt\u003d0",
+                "numCompleteTasks": 2,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 2
+              },
+              {
+                "id": 11,
+                "completed": true,
+                "stageUrl": "https://qa.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.109.218.180%3A8088%2Fproxy%2Fapplication_1516733470665_0002/stages/stage/?id\u003d11\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 6,
+        "numTasks": 6,
+        "truncated": false
+      },
+      "apps": [],
+      "version": "v0",
+      "jobName": "paragraph_1515071507321_-631734338",
+      "id": "20180104-131147_1940404526_q_CSYGBXVCDJ1581935390",
+      "dateCreated": "Jan 4, 2018 1:11:47 PM",
+      "dateStarted": "Jan 23, 2018 7:59:32 PM",
+      "dateFinished": "Jan 23, 2018 7:59:34 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Booking Trajectory vs Goal",
+      "text": "%sql\nselect concat(month, concat(\u0027 \u0027,year)), revenue_actual, revenue_expected  from sales_table",
+      "user": "ajithr@qubole.com",
+      "dateUpdated": "Feb 17, 2020 10:30:29 AM",
+      "config": {
+        "colWidth": 6.0,
+        "enabled": true,
+        "editorMode": "ace/mode/sql",
+        "title": true,
+        "editorHide": true,
+        "tableHide": false,
+        "results": [
+          {
+            "graph": {
+              "mode": "multiBarChart",
+              "height": 300.0,
+              "optionOpen": false,
+              "keys": [
+                {
+                  "name": "concat(month, concat( , year))",
+                  "index": 0.0,
+                  "aggr": "sum"
+                }
+              ],
+              "values": [
+                {
+                  "name": "revenue_actual",
+                  "index": 1.0,
+                  "aggr": "sum"
+                },
+                {
+                  "name": "revenue_expected",
+                  "index": 2.0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "scatter": {
+                "xAxis": {
+                  "name": "concat(month, concat( , year))",
+                  "index": 0.0,
+                  "aggr": "sum"
+                }
+              },
+              "setting": {
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        ],
+        "fontSize": 9.0,
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "concat(month, concat( , year))\trevenue_actual\trevenue_expected\nOct 2017\t185000\t190000\nNov 2017\t227500\t190000\nDec 2017\t259000\t190000\n"
+          }
+        ]
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 6,
+            "jobUrl": "https://qa.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.109.218.180%3A8088%2Fproxy%2Fapplication_1516733470665_0002/jobs/job?spark\u003dtrue\u0026id\u003d6",
+            "numTasks": 1,
+            "numCompletedTasks": 1,
+            "stages": [
+              {
+                "id": 12,
+                "completed": true,
+                "stageUrl": "https://qa.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.109.218.180%3A8088%2Fproxy%2Fapplication_1516733470665_0002/stages/stage/?id\u003d12\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          },
+          {
+            "id": 7,
+            "jobUrl": "https://qa.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.109.218.180%3A8088%2Fproxy%2Fapplication_1516733470665_0002/jobs/job?spark\u003dtrue\u0026id\u003d7",
+            "numTasks": 1,
+            "numCompletedTasks": 1,
+            "stages": [
+              {
+                "id": 13,
+                "completed": true,
+                "stageUrl": "https://qa.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.109.218.180%3A8088%2Fproxy%2Fapplication_1516733470665_0002/stages/stage/?id\u003d13\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 2,
+        "numTasks": 2,
+        "truncated": false
+      },
+      "apps": [],
+      "version": "v0",
+      "jobName": "paragraph_1515068033336_633986160",
+      "id": "20180104-121353_1664801169_q_CSYGBXVCDJ1581935390",
+      "dateCreated": "Jan 4, 2018 12:13:53 PM",
+      "dateStarted": "Jan 23, 2018 7:59:33 PM",
+      "dateFinished": "Jan 23, 2018 7:59:35 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Customers Closed",
+      "text": "%sql\nselect concat(month, concat(\u0027 \u0027,year)), revenue_actual, revenue_expected, customers_closed  from sales_table",
+      "user": "ajithr@qubole.com",
+      "dateUpdated": "Feb 17, 2020 10:30:29 AM",
+      "config": {
+        "colWidth": 6.0,
+        "enabled": true,
+        "editorMode": "ace/mode/sql",
+        "title": true,
+        "editorHide": true,
+        "tableHide": false,
+        "results": [
+          {
+            "graph": {
+              "mode": "pieChart",
+              "height": 300.0,
+              "optionOpen": false,
+              "keys": [
+                {
+                  "name": "concat(month, concat( , year))",
+                  "index": 0.0,
+                  "aggr": "sum"
+                }
+              ],
+              "values": [
+                {
+                  "name": "customers_closed",
+                  "index": 3.0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "scatter": {
+                "xAxis": {
+                  "name": "concat(month, concat( , year))",
+                  "index": 0.0,
+                  "aggr": "sum"
+                },
+                "yAxis": {
+                  "name": "revenue_actual",
+                  "index": 1.0,
+                  "aggr": "sum"
+                }
+              }
+            }
+          }
+        ],
+        "fontSize": 9.0,
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "concat(month, concat( , year))\trevenue_actual\trevenue_expected\tcustomers_closed\nOct 2017\t185000\t190000\t9\nNov 2017\t227500\t190000\t12\nDec 2017\t259000\t190000\t11\n"
+          }
+        ]
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 8,
+            "jobUrl": "https://qa.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.109.218.180%3A8088%2Fproxy%2Fapplication_1516733470665_0002/jobs/job?spark\u003dtrue\u0026id\u003d8",
+            "numTasks": 1,
+            "numCompletedTasks": 1,
+            "stages": [
+              {
+                "id": 14,
+                "completed": true,
+                "stageUrl": "https://qa.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.109.218.180%3A8088%2Fproxy%2Fapplication_1516733470665_0002/stages/stage/?id\u003d14\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          },
+          {
+            "id": 9,
+            "jobUrl": "https://qa.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.109.218.180%3A8088%2Fproxy%2Fapplication_1516733470665_0002/jobs/job?spark\u003dtrue\u0026id\u003d9",
+            "numTasks": 1,
+            "numCompletedTasks": 1,
+            "stages": [
+              {
+                "id": 15,
+                "completed": true,
+                "stageUrl": "https://qa.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.109.218.180%3A8088%2Fproxy%2Fapplication_1516733470665_0002/stages/stage/?id\u003d15\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 2,
+        "numTasks": 2,
+        "truncated": false
+      },
+      "apps": [],
+      "version": "v0",
+      "jobName": "paragraph_1515070370945_354783220",
+      "id": "20180104-125250_1067181230_q_CSYGBXVCDJ1581935390",
+      "dateCreated": "Jan 4, 2018 12:52:50 PM",
+      "dateStarted": "Jan 23, 2018 7:59:35 PM",
+      "dateFinished": "Jan 23, 2018 7:59:36 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Historical Quarterly Bookings",
+      "text": "%sql\nselect concat(quarter, concat(\u0027 \u0027,year)), bookings from historical_sales_table",
+      "user": "ajithr@qubole.com",
+      "dateUpdated": "Feb 17, 2020 10:30:29 AM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "editorMode": "ace/mode/sql",
+        "title": true,
+        "editorHide": true,
+        "tableHide": false,
+        "results": [
+          {
+            "graph": {
+              "mode": "lineChart",
+              "height": 300.0,
+              "optionOpen": false,
+              "keys": [
+                {
+                  "name": "concat(quarter, concat( , year))",
+                  "index": 0.0,
+                  "aggr": "sum"
+                }
+              ],
+              "values": [
+                {
+                  "name": "bookings",
+                  "index": 1.0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "scatter": {
+                "xAxis": {
+                  "name": "concat(quarter, concat( , year))",
+                  "index": 0.0,
+                  "aggr": "sum"
+                }
+              },
+              "setting": {
+                "lineChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        ],
+        "fontSize": 9.0,
+        "editorSetting": {}
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "concat(quarter, concat( , year))\tbookings\nQ1 2016\t405000\nQ2 2016\t450000\nQ3 2016\t520000\nQ4 2016\t485000\nQ1 2017\t535000\nQ2 2017\t560000\nQ3 2017\t601200\nQ4 2017\t607000\n"
+          }
+        ]
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 10,
+            "jobUrl": "https://qa.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.109.218.180%3A8088%2Fproxy%2Fapplication_1516733470665_0002/jobs/job?spark\u003dtrue\u0026id\u003d10",
+            "numTasks": 1,
+            "numCompletedTasks": 1,
+            "stages": [
+              {
+                "id": 16,
+                "completed": true,
+                "stageUrl": "https://qa.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.109.218.180%3A8088%2Fproxy%2Fapplication_1516733470665_0002/stages/stage/?id\u003d16\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          },
+          {
+            "id": 11,
+            "jobUrl": "https://qa.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.109.218.180%3A8088%2Fproxy%2Fapplication_1516733470665_0002/jobs/job?spark\u003dtrue\u0026id\u003d11",
+            "numTasks": 1,
+            "numCompletedTasks": 1,
+            "stages": [
+              {
+                "id": 17,
+                "completed": true,
+                "stageUrl": "https://qa.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.109.218.180%3A8088%2Fproxy%2Fapplication_1516733470665_0002/stages/stage/?id\u003d17\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 2,
+        "numTasks": 2,
+        "truncated": false
+      },
+      "apps": [],
+      "version": "v0",
+      "jobName": "paragraph_1515068017935_-2041203590",
+      "id": "20180104-121337_771726658_q_CSYGBXVCDJ1581935390",
+      "dateCreated": "Jan 4, 2018 12:13:37 PM",
+      "dateStarted": "Jan 23, 2018 7:59:36 PM",
+      "dateFinished": "Jan 23, 2018 7:59:37 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "",
+      "user": "ajithr@qubole.com",
+      "dateUpdated": "Feb 17, 2020 10:30:29 AM",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala",
+        "tableHide": false,
+        "lineNumbers": false,
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "version": "v0",
+      "jobName": "paragraph_1516737521763_-43849889",
+      "id": "20180123-195841_1975408693_q_CSYGBXVCDJ1581935390",
+      "dateCreated": "Jan 23, 2018 7:58:41 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Quarterly Sales Analysis",
+  "id": "CSYGBXVCDJ1581935390",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "md:shared_process": [],
+    "sh:shared_process": [],
+    "user_ajithr_qubole:shared_process": []
+  },
+  "config": {
+    "isDashboard": false,
+    "isZeppelinNotebookCronEnable": false,
+    "defaultLang": "spark"
+  },
+  "info": {
+    "runAllInProgress": false
+  },
+  "source": "FCN"
+}
